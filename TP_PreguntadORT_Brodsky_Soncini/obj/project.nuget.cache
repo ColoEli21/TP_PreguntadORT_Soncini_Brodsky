@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vNHcy5gCAWtf7bK7N7v0oJ1aOP908jGncpHfLojM3OQUJLFNwLrQcXA5Y7nW8cxObi/XOOq8QcIZrWn3XGLTqw==",
+  "dgSpecHash": "vbWuwSNJ9+rBEzFGOt8Q8n2lhXJT+jN8P+YNUWL+dpqP5TtpV+BZMyMeJ18jwXE4rTfetcs4/sPobXXKRWIknw==",
   "success": true,
-  "projectFilePath": "Z:\\TP_PreguntadORT_Brodsky_Soncini\\TP_PreguntadORT_Brodsky_Soncini.csproj",
+  "projectFilePath": "Z:\\TP_PreguntadORT_Soncini_Brodsky\\TP_PreguntadORT_Brodsky_Soncini\\TP_PreguntadORT_Brodsky_Soncini.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\48387471\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\48387471\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\TP_PreguntadORT_Brodsky_Soncini\\TP_PreguntadORT_Brodsky_Soncini.csproj": {}
+    "Z:\\TP_PreguntadORT_Soncini_Brodsky\\TP_PreguntadORT_Brodsky_Soncini\\TP_PreguntadORT_Brodsky_Soncini.csproj": {}
   },
   "projects": {
-    "Z:\\TP_PreguntadORT_Brodsky_Soncini\\TP_PreguntadORT_Brodsky_Soncini.csproj": {
+    "Z:\\TP_PreguntadORT_Soncini_Brodsky\\TP_PreguntadORT_Brodsky_Soncini\\TP_PreguntadORT_Brodsky_Soncini.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\TP_PreguntadORT_Brodsky_Soncini\\TP_PreguntadORT_Brodsky_Soncini.csproj",
+        "projectUniqueName": "Z:\\TP_PreguntadORT_Soncini_Brodsky\\TP_PreguntadORT_Brodsky_Soncini\\TP_PreguntadORT_Brodsky_Soncini.csproj",
         "projectName": "TP_PreguntadORT_Brodsky_Soncini",
-        "projectPath": "Z:\\TP_PreguntadORT_Brodsky_Soncini\\TP_PreguntadORT_Brodsky_Soncini.csproj",
+        "projectPath": "Z:\\TP_PreguntadORT_Soncini_Brodsky\\TP_PreguntadORT_Brodsky_Soncini\\TP_PreguntadORT_Brodsky_Soncini.csproj",
         "packagesPath": "C:\\Users\\48387471\\.nuget\\packages\\",
-        "outputPath": "Z:\\TP_PreguntadORT_Brodsky_Soncini\\obj\\",
+        "outputPath": "Z:\\TP_PreguntadORT_Soncini_Brodsky\\TP_PreguntadORT_Brodsky_Soncini\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -77,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

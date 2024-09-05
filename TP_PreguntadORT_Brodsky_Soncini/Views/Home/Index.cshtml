@@ -2,7 +2,45 @@
     ViewData["Title"] = "Index";
 }
 
-<div>
-    <h1>Index</h1>
-    <p>Bienvenidos al sitio web de NombreProyecto</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MiAplicacion</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+    <style>
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding-top: 56px; /* Ajuste para evitar que el contenido quede debajo del navbar */
+        }
+        .logo {
+            max-height: 300px;
+            margin-bottom: 10px; /* Reduce la distancia entre el logo y el botón */
+        }
+        .button-container {
+            margin-top: 10px; /* Ajusta el espacio entre el botón y el borde inferior */
+            margin-bottom: 20px; /* Espacio desde el borde inferior de la página */
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- Logo del juego -->
+        <img src="~/images/logo.webp" alt="Logo del Juego" class="logo img-fluid" />
+
+        <!-- Botón para configurar el juego -->
+        <div class="button-container">
+            <a class="btn btn-primary btn-lg" href='@Url.Action("ConfigurarJuego", "Home")'>Jugar</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

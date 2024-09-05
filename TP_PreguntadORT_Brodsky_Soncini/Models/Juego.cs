@@ -54,9 +54,27 @@ public static class Juego
         return BD.ObtenerRespuestas(idPregunta); 
     }
 
-    public static bool VerificarRespuesta(int idPregunta, int idRespuesta)
+    public static byte VerificarRespuesta(int idPregunta, int idRespuesta)
     {
-        return false;
+        byte correcta = 0;
+        foreach (Respuesta item in listaRespuestas)
+        {
+            if(item.IdRespuesta == idRespuesta){
+                correcta = item.Correcta;
+            }
+            
+        }
+        if (correcta == 1){
+            puntajeActual += 10;
+            cantidadPreguntasCorrectas++;
+            contadorNroPreguntaActual++;
+            preguntaActual = ObtenerProximaPregunta();
+        }
+        else{
+            contadorNroPreguntaActual++;
+            preguntaActual = ObtenerProximaPregunta();
+        }
+        return correcta;
     }
 
 }

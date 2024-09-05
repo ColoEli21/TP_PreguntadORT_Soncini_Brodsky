@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TP_PreguntadORT_Brodsky_Soncini")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fce1236b2d37bed3ac6e207fe603cccf491783cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5d67a3c9ef39e7a13ac2294534375f29edb811d")]
 [assembly: System.Reflection.AssemblyProductAttribute("TP_PreguntadORT_Brodsky_Soncini")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TP_PreguntadORT_Brodsky_Soncini")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
