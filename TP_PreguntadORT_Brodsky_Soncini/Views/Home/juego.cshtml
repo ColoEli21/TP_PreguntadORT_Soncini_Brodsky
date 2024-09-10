@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Juego";
+    var username = Juego.username;
+    var puntajeActual = Juego.puntajeActual;
+    var pregunta = ViewBag.PreguntaActual as Pregunta;
+    var respuestas = ViewBag.Respuesta as List<Respuesta>;
+}
+
+<h2>Juego</h2>
+
+<div>
+    <p><strong>Nombre de usuario:</strong> @username</p>
+    <p><strong>Puntaje actual:</strong> @puntajeActual</p>
+</div>
+
+@if (pregunta != null)
+{
+    <div>
+        <p><strong>Pregunta @Juego.puntajeActual:</strong> @pregunta.Enunciado</p>
+
+        @if (!string.IsNullOrEmpty(pregunta.Foto))
+        {
+            <img src="@pregunta.Foto" alt="Imagen de la Pregunta" />
+        }
+    </div>
+
+    <form action='@Url.Action("VerificarRespuesta", "Home")' method="post">
+        @foreach (var respuesta in respuestas)
+        {
+            <div>
+                <input type="radio" id="respuesta_@respuesta.IdRespuesta" name="idRespuesta" value="@respuesta.IdRespuesta" />
+                <label for="respuesta_@respuesta.IdRespuesta">@respuesta.Contenido</label>
+
+                @if (!string.IsNullOrEmpty(respuesta.Foto))
+                {
+                    <img src="@respuesta.Foto" alt="Imagen de la Respuesta" />
+                }
+            </div>
+        }
+
+        <input type="hidden" name="idPregunta" value="@pregunta.IdPregunta" />
+        <button type="submit">Responder</button>
+    </form>
+}
+else
+{
+    <script>
+        window.location.href = '@Url.Action("Fin", "Home")';
+    </script>
+}

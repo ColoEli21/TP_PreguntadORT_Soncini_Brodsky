@@ -4,8 +4,8 @@ namespace TP_PreguntadORT_Brodsky_Soncini.Models;
 
 public static class Juego
 {
-    private static string username;
-    private static int puntajeActual;
+    public static string username;
+    public static int puntajeActual;
     private static int cantidadPreguntasCorrectas;
     private static int contadorNroPreguntaActual;
     private static Pregunta preguntaActual;
@@ -59,22 +59,29 @@ public static class Juego
         byte correcta = 0;
         foreach (Respuesta item in listaRespuestas)
         {
-            if(item.IdRespuesta == idRespuesta){
+            if(item.IdRespuesta == idRespuesta)
+            {
                 correcta = item.Correcta;
+                break; // Sal de la iteración tan pronto como encuentres la respuesta
             }
-            
         }
-        if (correcta == 1){
+
+        
+        if (correcta == 1)
+        {
             puntajeActual += 10;
             cantidadPreguntasCorrectas++;
             contadorNroPreguntaActual++;
             preguntaActual = ObtenerProximaPregunta();
         }
-        else{
+        else
+        {
             contadorNroPreguntaActual++;
             preguntaActual = ObtenerProximaPregunta();
         }
         return correcta;
     }
+
+
 
 }

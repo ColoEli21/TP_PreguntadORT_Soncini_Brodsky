@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Respuesta";
+    var correcta = ViewBag.Correcta as byte? ?? 0; 
+    var pregunta = ViewBag.PreguntaActual as Pregunta;
+    var respuestas = ViewBag.Respuesta as List<Respuesta>; 
+
+    var respuestaCorrecta = respuestas?.FirstOrDefault(r => r.Correcta == 1);
+}
+
+<h2>Resultado de tu respuesta</h2>
+
+<div style="text-align: center; padding: 20px;">
+    @if (correcta == 1)
+    {
+        <h3 style="color: green;">¡Correcto!</h3>
+        <p>¡Bien hecho! Has respondido correctamente.</p>
+    }
+    else
+    {
+        <h3 style="color: red;">Incorrecto</h3>
+        <p>Lo siento, tu respuesta no es correcta.</p>
+
+        @if (respuestaCorrecta != null)
+        {
+            <p><strong>La respuesta correcta era:</strong> @respuestaCorrecta.Contenido</p>
+        }
+    }
+</div>
+
+<div style="text-align: center; padding: 20px;">
+    <a href='@Url.Action("Jugar", "Home")' style="font-size: 18px; color: #007bff;">Jugar la siguiente pregunta</a>
+</div>

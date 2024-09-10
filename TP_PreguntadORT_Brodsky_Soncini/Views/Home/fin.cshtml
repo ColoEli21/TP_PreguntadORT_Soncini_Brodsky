@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Fin del Juego";
+    var username = Juego.username; 
+    var puntajeFinal = Juego.puntajeActual; 
+}
+
+<h2>Fin del Juego</h2>
+
+<div>
+    <p><strong>Nombre de usuario:</strong> @username</p>
+    <p><strong>Puntaje final:</strong> @puntajeFinal</p>
+</div>
+
+<div>
+    <a asp-action="ConfigurarJuego">Volver a jugar</a>
+</div>

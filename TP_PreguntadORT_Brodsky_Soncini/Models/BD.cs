@@ -25,21 +25,22 @@ public static class BD
     }
     public static List<Pregunta> ObtenerPreguntas(int idDificultad, int idCategoria)
     {
-        List<Pregunta> MiPregunta = null;
-        using(SqlConnection conn = new SqlConnection(_ConnectionString)){
-            string sql = "";
-            if(idDificultad == -1){
-                sql="SELECT * FROM Preguntas left join Dificultades d on d.IdDificultad = @id1";
+        using(SqlConnection conn = new SqlConnection(_ConnectionString))
+        {
+            string sql = "SELECT * FROM Preguntas WHERE 1=1";
+            
+            if(idDificultad != -1)
+            {
+                sql += " AND IdDificultad = @idDificultad";
             }
-            else if (idCategoria == -1){
-                sql="SELECT * FROM Preguntas left join Categorias c on c.IdCategoria = @id2";
+
+            if (idCategoria != -1)
+            {
+                sql += " AND IdCategoria = @idCategoria";
             }
-            else {
-                sql="SELECT * FROM Preguntas inner join Categorias c on c.IdCategoria = @id2 inner join Dificultades d on d.IdDificultad = @id1";
-            }
-            MiPregunta = conn.Query<Pregunta>(sql, new{id1 = idDificultad, id2 = idCategoria}).ToList();
+
+            return conn.Query<Pregunta>(sql, new { idDificultad, idCategoria }).ToList();
         }
-        return MiPregunta;
     }
     public static List<Respuesta> ObtenerRespuestas(int idPregunta)
     {

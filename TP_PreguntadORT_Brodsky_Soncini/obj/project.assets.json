@@ -505,7 +505,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\48387471\\.nuget\\packages\\": {},
+    "C:\\Users\\48387263\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -514,14 +514,14 @@
       "projectUniqueName": "Z:\\TP_PreguntadORT_Soncini_Brodsky\\TP_PreguntadORT_Brodsky_Soncini\\TP_PreguntadORT_Brodsky_Soncini.csproj",
       "projectName": "TP_PreguntadORT_Brodsky_Soncini",
       "projectPath": "Z:\\TP_PreguntadORT_Soncini_Brodsky\\TP_PreguntadORT_Brodsky_Soncini\\TP_PreguntadORT_Brodsky_Soncini.csproj",
-      "packagesPath": "C:\\Users\\48387471\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\48387263\\.nuget\\packages\\",
       "outputPath": "Z:\\TP_PreguntadORT_Soncini_Brodsky\\TP_PreguntadORT_Brodsky_Soncini\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\48387471\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\48387263\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
