@@ -27,6 +27,53 @@
             margin-top: 10px; /* Ajusta el espacio entre el botón y el borde inferior */
             margin-bottom: 20px; /* Espacio desde el borde inferior de la página */
         }
+        /* General Styles */
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Altura completa de la ventana */
+        background-color: #f8f9fa; /* Fondo claro para toda la página */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Wrapper for main content */
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+    }
+
+    /* Logo Styles */
+    .logo {
+        max-height: 200px; /* Ajusta la altura máxima del logo */
+        margin-bottom: 20px; /* Espacio entre el logo y el botón */
+    }
+
+    /* Button Styles */
+    .button-container {
+        margin-top: 10px;
+    }
+
+    .btn-primary {
+        background-color: #007bff; /* Fondo azul para el botón */
+        border-color: #007bff; /* Borde del botón */
+        padding: 10px 30px; /* Relleno del botón */
+        border-radius: 25px; /* Bordes redondeados */
+        font-size: 1.2em; /* Tamaño de fuente del botón */
+        transition: background-color 0.3s ease; /* Transición suave en hover */
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3; /* Cambio de color en hover */
+        border-color: #0056b3;
+    }
+
     </style>
 </head>
 <body>

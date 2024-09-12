@@ -31,7 +31,6 @@ public class HomeController : Controller
     public IActionResult Jugar()
     {
         ViewBag.PreguntaActual = Juego.ObtenerProximaPregunta();
-        ViewBag.Respuesta = Juego.ObtenerProximasRespuestas(ViewBag.PreguntaActual.IdPregunta);
         if(ViewBag.PreguntaActual == null){
             return View("Fin");
         }
@@ -40,6 +39,7 @@ public class HomeController : Controller
             return View("Juego");
         }
     }
+    [HttpPost]
     public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta)
 {
     ViewBag.Correcta = Juego.VerificarRespuesta(idPregunta, idRespuesta);

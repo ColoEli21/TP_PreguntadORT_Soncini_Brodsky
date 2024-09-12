@@ -9,6 +9,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewData["Title"] - MiAplicacion</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* General Styles */
+        body {
+            background-color: #f8f9fa; /* Fondo claro */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            max-width: 600px; /* Anchura máxima para la caja de contenido */
+            padding: 20px;
+            background-color: #ffffff; /* Fondo blanco para el contenedor */
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+        }
+
+        /* Title Styles */
+        h1 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center; /* Centra el título */
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 15px; /* Espaciado entre los campos del formulario */
+        }
+
+        label {
+            font-weight: bold; /* Hace que las etiquetas sean en negrita */
+            color: #555; /* Color gris oscuro para las etiquetas */
+        }
+
+        .form-control {
+            border-radius: 5px; /* Bordes ligeramente redondeados */
+            border: 1px solid #ced4da; /* Borde gris claro */
+            transition: border-color 0.3s ease; /* Transición suave del color del borde */
+        }
+
+        .form-control:focus {
+            border-color: #007bff; /* Cambio de color del borde al estar enfocado */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Sombra alrededor del campo enfocado */
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            width: 100%; /* Botón que ocupa toda la anchura del contenedor */
+            padding: 10px;
+            background-color: #007bff; /* Color de fondo del botón */
+            border-color: #007bff; /* Borde del botón */
+            border-radius: 5px; /* Bordes ligeramente redondeados */
+            font-size: 1.1em; /* Tamaño de fuente del botón */
+            transition: background-color 0.3s ease; /* Transición suave en hover */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Cambio de color en hover */
+            border-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">

@@ -6,45 +6,142 @@
     var respuestas = ViewBag.Respuesta as List<Respuesta>;
 }
 
-<h2>Juego</h2>
 
-<div>
-    <p><strong>Nombre de usuario:</strong> @username</p>
-    <p><strong>Puntaje actual:</strong> @puntajeActual</p>
-</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+    /* Estilo CSS en el bloque <style> */
 
-@if (pregunta != null)
-{
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+div {
+    margin: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+strong {
+    color: #555;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+label {
+    font-size: 1.1em;
+    margin-right: 15px;
+}
+
+button.responder {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.responder:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+    </style>
+</head>
+<body>
+
+    <h2>Juego</h2>
+
     <div>
-        <p><strong>Pregunta @Juego.puntajeActual:</strong> @pregunta.Enunciado</p>
-
-        @if (!string.IsNullOrEmpty(pregunta.Foto))
-        {
-            <img src="@pregunta.Foto" alt="Imagen de la Pregunta" />
-        }
+        <p><strong>Nombre de usuario:</strong> @username</p>
+        <p><strong>Puntaje actual:</strong> @puntajeActual</p>
     </div>
 
-    <form action='@Url.Action("VerificarRespuesta", "Home")' method="post">
-        @foreach (var respuesta in respuestas)
-        {
-            <div>
-                <input type="radio" id="respuesta_@respuesta.IdRespuesta" name="idRespuesta" value="@respuesta.IdRespuesta" />
-                <label for="respuesta_@respuesta.IdRespuesta">@respuesta.Contenido</label>
+    @if (pregunta != null)
+    {
+        <div>
+            <p><strong>Pregunta @Juego.puntajeActual:</strong> @pregunta.Enunciado</p>
 
-                @if (!string.IsNullOrEmpty(respuesta.Foto))
-                {
-                    <img src="@respuesta.Foto" alt="Imagen de la Respuesta" />
-                }
-            </div>
-        }
+            @if (!string.IsNullOrEmpty(pregunta.Foto))
+            {
+                <img src="@pregunta.Foto" alt="Imagen de la Pregunta" />
+            }
+        </div>
 
-        <input type="hidden" name="idPregunta" value="@pregunta.IdPregunta" />
-        <button type="submit">Responder</button>
-    </form>
-}
-else
-{
-    <script>
-        window.location.href = '@Url.Action("Fin", "Home")';
-    </script>
-}
+        <form action='@Url.Action("VerificarRespuesta", "Home")' method="post">
+            @foreach (var respuesta in respuestas)
+            {
+                <div>
+                    <input type="radio" id="respuesta_@respuesta.IdRespuesta" name="idRespuesta" value="@respuesta.IdRespuesta" />
+                    <label for="respuesta_@respuesta.IdRespuesta">@respuesta.Contenido</label>
+
+                    @if (!string.IsNullOrEmpty(respuesta.Foto))
+                    {
+                        <img src="@respuesta.Foto" alt="Imagen de la Respuesta" />
+                    }
+                </div>
+            }
+
+            <input type="hidden" name="idPregunta" value="@pregunta.IdPregunta" />
+            <button class="responder" type="submit">Responder</button>
+        </form>
+    }
+    else
+    {
+        <script>
+            window.location.href = '@Url.Action("Fin", "Home")';
+        </script>
+    }
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 - PreguntaORT. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

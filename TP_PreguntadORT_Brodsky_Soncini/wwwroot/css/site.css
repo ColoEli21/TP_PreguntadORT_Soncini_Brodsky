@@ -9,15 +9,66 @@ html {
   }
 }
 
+/* General Styles */
 body {
-  margin: 10px;
-  padding: 10px;
+  padding-top: 56px; /* Ajuste para la barra de navegación fija */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa; /* Fondo claro para todo el cuerpo */
 }
 
+header {
+  margin-bottom: 20px; /* Espacio adicional debajo del encabezado */
+}
 
+.navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para la barra de navegación */
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+/* Navbar Links */
+.nav-link {
+  color: #333; /* Color del texto de los enlaces */
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff; /* Color de los enlaces al pasar el cursor */
+}
+
+.custom-button {
+  background-color: #007bff; /* Fondo azul para el botón */
+  color: #fff; /* Texto blanco */
+  border-radius: 20px;
+  padding: 8px 16px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #0056b3; /* Cambio de color en hover */
+}
+
+/* Footer Styles */
 footer {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #f8f9fa;
-  border-top: 1px solid #e9ecef;
+  background-color: #343a40; /* Fondo oscuro para el pie de página */
+  color: #fff; /* Texto blanco */
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      padding: 0.5rem 1rem;
+  }
+
+  .custom-button {
+      margin-left: 0;
+      margin-top: 10px;
+  }
 }

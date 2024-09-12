@@ -51,7 +51,8 @@ public static class Juego
 
     public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta)
     {
-        return BD.ObtenerRespuestas(idPregunta); 
+        listaRespuestas = BD.ObtenerRespuestas(idPregunta);
+        return listaRespuestas; 
     }
 
     public static byte VerificarRespuesta(int idPregunta, int idRespuesta)
@@ -71,14 +72,9 @@ public static class Juego
         {
             puntajeActual += 10;
             cantidadPreguntasCorrectas++;
-            contadorNroPreguntaActual++;
-            preguntaActual = ObtenerProximaPregunta();
         }
-        else
-        {
-            contadorNroPreguntaActual++;
-            preguntaActual = ObtenerProximaPregunta();
-        }
+        contadorNroPreguntaActual++;
+        preguntaActual = ObtenerProximaPregunta();
         return correcta;
     }
 

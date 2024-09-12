@@ -4,7 +4,7 @@ namespace TP_PreguntadORT_Brodsky_Soncini.Models;
 
 public static class BD
 {
-    private static string _ConnectionString = "Server=localhost;DataBase=PreguntadORT;Trusted_Connection=true;";
+    private static string _ConnectionString = "Server=localhost;DataBase=PreguntadORT;Trusted_Connection=true;";    
     public static List<Categoria> ObtenerCategorias()
     {
         List<Categoria> ListaCategorias = new List<Categoria>();
